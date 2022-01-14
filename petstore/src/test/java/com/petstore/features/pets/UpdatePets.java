@@ -22,7 +22,7 @@ import static org.hamcrest.Matchers.is;
 @Narrative(text = {"As a PetStore user",
         "I want to be able to update a pet info",
         "in order to register all the relevant info"})
-@WithTagValuesOf({"invoices", "with-taxes"})
+@WithTagValuesOf({"pets", "update-pets"})
 public class UpdatePets extends BaseConf {
     Actor elvis;
 

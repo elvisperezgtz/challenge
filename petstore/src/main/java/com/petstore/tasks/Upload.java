@@ -8,8 +8,6 @@ import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.rest.interactions.Post;
 import net.thucydides.core.annotations.Step;
 
-import java.io.File;
-
 public class Upload implements Task {
 private final int id;
 

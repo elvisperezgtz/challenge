@@ -20,7 +20,7 @@ import static org.hamcrest.Matchers.is;
 @Narrative(text = {"As a PetStore manager",
         "I want to be able to login",
         "in order to get access to whole functionality"})
-@WithTagValuesOf({"store", "orders"})
+@WithTagValuesOf({"customers", "login"})
 public class UserLogin extends BaseConf {
 
     Actor elvis;

@@ -12,10 +12,7 @@ public enum EndPoints {
         USER("api/v3/user/"),
         LOGIN("api/v3/user/login?username={username}&password={password}"),
         LOGOUT("api/v3/user/logout"),
-//        GET_PET_BY_ID("api/v3/pet/{id}"),
-
         ;
-
 
         private final String path;
 

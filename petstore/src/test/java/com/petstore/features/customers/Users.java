@@ -24,7 +24,7 @@ import static org.hamcrest.Matchers.is;
 @Narrative(text = {"As a PetStore manager",
         "I want to be able to create an user",
         "in order to register new users"})
-@WithTagValuesOf({"store", "orders"})
+@WithTagValuesOf({"customers", "user"})
 public class Users extends BaseConf {
 
     Actor elvis;

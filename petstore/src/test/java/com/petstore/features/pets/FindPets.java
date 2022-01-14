@@ -19,7 +19,7 @@ import static org.hamcrest.Matchers.is;
 @RunWith(SerenityRunner.class)
 @Narrative(text = {"As a PetStore user",
         "I want to be able to find a pet info",
-        "in order to register all the relevant info"})
+        "in order to get all the relevant info"})
 
 @WithTagValuesOf({"pets", "updatePets"})
 public class FindPets extends BaseConf {
@@ -31,11 +31,10 @@ public class FindPets extends BaseConf {
     }
 
     @Test
-    public void should_be() {
+    public void should_PetsBeShow_when_SendsPetTags() {
 
         elvis.attemptsTo(
                 Find.petByTags("string")
-
         );
 
         elvis.should(
@@ -43,16 +42,14 @@ public class FindPets extends BaseConf {
                         response -> response.statusCode(is(200))),
                 seeThatResponse("Should pet ID be created",
                         response -> response.body("size()", Matchers.greaterThanOrEqualTo(1)))
-
         );
     }
 
     @Test
-    public void status_non_existing() {
+    public void should_serviceResponseBe400_whenPetStatusDoesNotExists() {
 
         elvis.attemptsTo(
                 Find.petByStatus("undefined")
-
         );
 
         elvis.should(
@@ -60,17 +57,15 @@ public class FindPets extends BaseConf {
                         response -> response.statusCode(is(400))),
                 seeThatResponse("The response",
                         response -> response.body("message",equalTo("Input error: query parameter `status value `undefined` is not in the allowable values `[available, pending, sold]`"))
-
                 )
         );
     }
 
     @Test
-    public void status_existing() {
+    public void should_showPetInfo_whenPetStatusDoesExists() {
 
         elvis.attemptsTo(
                 Find.petByStatus("available")
-
         );
 
         elvis.should(
@@ -78,17 +73,15 @@ public class FindPets extends BaseConf {
                         response -> response.statusCode(is(200))),
                 seeThatResponse("The response",
                         response -> response.body("size()", Matchers.greaterThanOrEqualTo(1))
-
                 )
         );
     }
 
     @Test
-    public void find_pet_with_non_exist_ID() {
+    public void should_serviceResponseBe404_whenPetIDDoesNotExists() {
 
         elvis.attemptsTo(
                 Find.petByID(3000)
-
         );
 
         elvis.should(
@@ -96,7 +89,6 @@ public class FindPets extends BaseConf {
                         response -> response.statusCode(is(404))),
                 seeThatResponse("The response",
                         response -> response.body( Matchers.equalTo("Pet not found"))
-
                 )
         );
     }

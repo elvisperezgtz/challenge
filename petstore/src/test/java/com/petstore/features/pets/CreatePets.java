@@ -25,7 +25,7 @@ import static org.hamcrest.Matchers.is;
 @Narrative(text = {"As a PetStore user",
         "I want to be able to create a pet info",
         "in order to register all the relevant info"})
-@WithTagValuesOf({"createPet", "Pets"})
+@WithTagValuesOf({"Pets", "createPets"})
 public class CreatePets extends BaseConf {
 
     Actor elvis;
@@ -99,6 +99,5 @@ public class CreatePets extends BaseConf {
         );
 
     }
-
 
 }
