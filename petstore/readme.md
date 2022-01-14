@@ -1,5 +1,5 @@
 # Pet Store
-  
+
 
 This project is a test automation for the API **`Pet store`**, using Junit, Rest Assured and Java with the automation pattern design called Screenplay pattern.
 Is a combination of functional and unit test, focused the most of them on functional and E2E test for API
@@ -7,29 +7,30 @@ Is a combination of functional and unit test, focused the most of them on functi
 
 
 # Technology Required
- - Java SDK 1.8
- - Gradle 7.3 or lasted
+- Java SDK 1.8
+- Gradle 7.3 or lasted
 - API for pet Store [project here](https://github.com/swagger-api/swagger-petstore)
 # Technology Stack
-
- - SerenityBDD core version: 3.1.15
- - SerenityRest
- - Screenplay Pattern
- - Rest assured 4.4.0
+The technology stack selects for this project  allows testing every application feature, and can be used for UI automated testing included web and mobile (Android, iOS) using the same architecture, sharing some functionalities to complete a E2E tests.
+For example, we can use classes and methods created to test an API project, to facility steps of an E2E test.
+All the technology stack selected for this testing project are listed below:
+- SerenityBDD core version: 3.1.15
+- SerenityRest
+- Screenplay Pattern
+- Rest assured 4.4.0
 
 # How to run
 
- 1. Set up your environment as explained in the [readme](https://github.com/swagger-api/swagger-petstore)
- 2. Execute the following command:
+1. Set up your environment as explained in the [readme](https://github.com/swagger-api/swagger-petstore)
+2. Execute the following command:
 
-   
+
 
      gradle clean test
 
 # Test cases
 
 All the test cases are listed below:
-
 
 | Feature|Scenario  |
 |--|--|
